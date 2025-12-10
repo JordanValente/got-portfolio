@@ -1,0 +1,11 @@
+<div class="character-wrapper">
+  @for (characters of charactersFromApi; track characters.id){
+    <div character="character-card">
+      <h1>{{characters.firstName}}</h1>
+      <p>{{characters.title}}</p>
+      <strong>{{characters.family}}</strong>
+    </div>
+  } @empty {
+   <p>dd</p>
+  }
+</div>
