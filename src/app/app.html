@@ -1,3 +1,13 @@
-<app-charaters-list [charactersFromApi]="characters" ]=""/>
+<input
+  #searchInput
+  type="text"
+  placeholder="Tapez quelque chose..."
+  (input)="onSearch(searchInput.value)"
+/>
+<p>Nombre de personnages trouvés : {{ filteredCharacters.length }}</p>
+<app-charaters-list [charactersFromApi]="filteredCharacters"></app-charaters-list>
+<app-continents-list [continentsFromApi]="continents"></app-continents-list>
+<!--<app-charaters-list [charactersFromApi]="characters"></app-charaters-list> -->
+
 
 <router-outlet />

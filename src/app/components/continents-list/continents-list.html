@@ -1,0 +1,13 @@
+@if (continentsFromApi && continentsFromApi.length > 0) {
+  <div class="continent-wrapper">
+    @for (continent of continentsFromApi; track continent.id) {
+      <div class="continent-card">
+        <h2>{{ continent.name }}</h2>
+      </div>
+    }
+  </div>
+} @else {
+  <p>Aucun continent trouvé</p>
+}
+
+

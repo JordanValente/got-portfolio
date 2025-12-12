@@ -8,5 +8,5 @@ import {Characters} from '../../shared/models/characteres.model';
   styleUrl: './charaters-list.scss',
 })
 export class CharatersList {
- @Input() charactersFromApi! : Characters[];
+  @Input() charactersFromApi: Characters[] = [];
 }
