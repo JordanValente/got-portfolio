@@ -8,8 +8,14 @@
       <strong>{{character.family}}</strong>
     </div>
   }
+  <div class="character-card" *ngFor="let character of charactersFromApi">
+    <h1>{{ character.fullName | emoji }}</h1>
+    <p>{{ character.title }}</p>
+    <strong>{{ character.family }}</strong>
+  </div>
 </div>
   } @else {
   <p>No characters found</p>
 }
 
+<router-outlet />

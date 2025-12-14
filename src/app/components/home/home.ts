@@ -1,3 +1,4 @@
+
 import { ChangeDetectorRef, Component, inject, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { CharatersList} from './components/charaters-list/charaters-list';
@@ -8,13 +9,16 @@ import { Continent } from './shared/models/continent.model';
 import {NgClass, NgStyle} from '@angular/common';
 
 @Component({
-  selector: 'app-root',
-  standalone: true,
-  imports: [RouterOutlet, CharatersList, ContinentsList, NgClass, NgStyle],
-  templateUrl: './app.html',
-  styleUrls: ['./app.scss']
+  selector: 'app-home',
+  imports: [
+    CharatersList,
+    ContinentsList,
+    RouterOutlet
+  ],
+  templateUrl: './home.html',
+  styleUrl: './home.scss',
 })
-export class App implements OnInit {
+export class Home {
   private charactersServices: CharacterService = inject(CharacterService);
   private cdr = inject(ChangeDetectorRef);
 
@@ -53,3 +57,4 @@ export class App implements OnInit {
     this.searchQuery = query;
   }
 }
+
